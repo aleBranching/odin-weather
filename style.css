@@ -1,0 +1,164 @@
+@import url("https://fonts.googleapis.com/css2?family=Archivo+Black&display=swap");
+
+body {
+  /* background-attachment: fixed; */
+  background-color: black;
+  margin: 0;
+  padding: 0;
+  font-family: "Archivo Black", sans-serif;
+}
+
+form label svg {
+  height: 2.5rem;
+  /* margin-left: 1rem; */
+  /* fill: white; */
+}
+
+#animatedPath {
+  /* fill: url(#MyGradient); */
+  stroke-dasharray: 1112;
+  stroke-dashoffset: 1112;
+  animation: sign 5s ease;
+  /* stroke-dasharray: 100; */
+  animation-fill-mode: forwards;
+}
+
+.logo svg {
+  /* background: linear-gradient(to right, red, orange, yellow); */
+
+  /* border-radius: 10rem; */
+  /* box-shadow: 10px black; */
+  margin-left: 1rem;
+}
+
+@keyframes sign {
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+button[type="submit"] svg {
+  height: 10px;
+}
+
+.searchBox {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: linear-gradient(to right, red, red);
+  font-family: "Archivo Black", sans-serif;
+  padding-bottom: 0.5rem;
+}
+
+form input {
+  height: 3rem;
+  width: 20rem;
+  font-family: "Archivo Black", sans-serif;
+  /* font-family: ; */
+  font-size: 2rem;
+  border: none;
+}
+
+.currentLocationWrap svg {
+  height: 2rem;
+}
+.currentLocationWrap {
+  display: flex;
+  align-items: center;
+}
+
+form input:invalid {
+  border: 10px solid;
+}
+
+form span {
+  /* font-family: "Archivo Black", sans-serif; */
+  font-size: 2rem;
+  display: flex;
+  align-items: center;
+  /* text-align: center; */
+}
+form {
+  display: flex;
+  gap: 10px;
+}
+
+form button {
+  width: 3rem;
+  background-color: black;
+  height: 3rem;
+  border: none;
+  border-radius: 1rem;
+  cursor: pointer;
+  margin-right: 1rem;
+}
+button[type="submit"] svg {
+  height: 2rem;
+  fill: white;
+  transition: height 0.1s ease;
+}
+
+button[type="submit"]:hover svg {
+  height: 2.2rem;
+  fill: white;
+}
+.main {
+  height: 80%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.mainCard {
+  background-color: aliceblue;
+  height: 20rem;
+  width: 20rem;
+  padding: 3rem;
+  border-radius: 2rem;
+  margin-top: 2rem;
+}
+
+.smallSVG {
+  height: 20px;
+}
+
+.temperature {
+  display: flex;
+  gap: 0.5rem;
+  justify-content: space-between;
+}
+
+.temperatureNumber {
+  display: flex;
+}
+
+.description {
+  display: flex;
+  gap: 0.5rem;
+}
+
+@media screen and (max-width: 500px) {
+  .searchBox {
+    flex-direction: column;
+  }
+  .logo svg {
+    height: 2rem;
+  }
+
+  form {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  form input {
+    border-radius: 1rem;
+  }
+
+  form button {
+    width: 10rem;
+  }
+
+  .mainCard {
+    width: 300px;
+  }
+}
